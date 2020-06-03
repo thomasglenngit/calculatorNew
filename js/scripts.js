@@ -42,15 +42,20 @@ $(document).ready(function() {
     event.preventDefault();
     var number1 = parseInt($("#input1").val());
     var number2 = parseInt($("#input2").val());
-    var operator = $("input:radio[name=operator]:checked").val();
+    // var operator = $("input:radio[name=operator]:checked").val();
+    var addBtn = $("submit#btnAdd");
+    var subtractBtn = $("submit#btnSubtract");
+    var multiplyBtn = $("submit#btnMultiply");
+    var divideBtn = $("submit#btnDivide");
+    debugger;
     var result;
-    if (operator === "add") {
+    if (addBtn === true) {
       result = add(number1, number2);
-    } else if (operator === "subtract") {
+    } else if (subtractBtn === true) {
       result = subtract(number1, number2);
-    } else if (operator === "multiply") {
+    } else if (multiplyBtn === true) {
       result = multiply(number1, number2);
-    } else if (operator === "divide") {
+    } else if (divideBtn === true) {
       result = divide(number1, number2);
     }
     $("#output").text(result);
