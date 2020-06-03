@@ -1,3 +1,5 @@
+// Business Logic:
+
 var add = function(number1, number2) {
   return number1 + number2;
 };
@@ -34,7 +36,7 @@ var divide = function(number1, number2) {
 //   });
 // });
 
-
+// Everything below this line is User Interface Logic
 $(document).ready(function() {
   $("form#calculator").submit(function() {
     event.preventDefault();
